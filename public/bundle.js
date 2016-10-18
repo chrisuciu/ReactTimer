@@ -121,8 +121,8 @@
 	    React.createElement(
 	        Route,
 	        { path: '/', component: Main },
-	        React.createElement(Route, { path: 'timer', component: Timer }),
-	        React.createElement(Route, { path: 'countdown', component: Countdown })
+	        React.createElement(Route, { path: 'countdown', component: Countdown }),
+	        React.createElement(IndexRoute, { component: Timer })
 	    )
 	), document.getElementById('app'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
@@ -25864,7 +25864,7 @@
 	                    null,
 	                    React.createElement(
 	                        IndexLink,
-	                        { to: '/timer', activeClassName: 'active-link', activeStyle: { fontWeight: 'bold' } },
+	                        { to: '/', activeClassName: 'active-link' },
 	                        'Timer'
 	                    )
 	                ),
@@ -25873,7 +25873,7 @@
 	                    null,
 	                    React.createElement(
 	                        Link,
-	                        { to: '/countdown', activeClassName: 'active-link', activeStyle: { fontWeight: 'bold' } },
+	                        { to: '/countdown', activeClassName: 'active-link' },
 	                        'Countdown'
 	                    )
 	                )
@@ -26328,7 +26328,7 @@
 
 
 	// module
-	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #333333; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar .menu > .menu-text > a {\n  padding: 0;\n  display: inline; }\n", ""]);
+	exports.push([module.id, ".top-bar, .top-bar ul {\n  background-color: #333333; }\n\n.top-bar .menu-text {\n  color: #ffffff; }\n\n.top-bar .menu > .menu-text > a {\n  padding: 0;\n  display: inline; }\n\n.top-bar .active-link {\n  font-weight: bold; }\n", ""]);
 
 	// exports
 
